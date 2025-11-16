@@ -5,9 +5,11 @@ import {ObjectId} from "bson";
 
 export async function PUT(
 	request: NextRequest,
-	{ params }: { params: { id: string } }
+	context: { params: Promise<{ id: string }> }
 ) {
 	try {
+		const { id } = await context.params;
+		
 		const client = await clientPromise;
 		const db = client.db('fillblank');
 		const collection = db.collection('problems');
@@ -16,7 +18,7 @@ export async function PUT(
 		const { text, answers, blanks } = body;
 		
 		await collection.updateOne(
-			{ _id: new ObjectId(params.id) },
+			{ _id: new ObjectId(id) },
 			{ $set: { text, answers, blanks, updatedAt: new Date() } }
 		);
 		
@@ -29,14 +31,16 @@ export async function PUT(
 
 export async function DELETE(
 	request: NextRequest,
-	{ params }: { params: { id: string } }
+	context: { params: Promise<{ id: string }> }
 ) {
 	try {
+		const { id } = await context.params;
+		
 		const client = await clientPromise;
 		const db = client.db('fillblank');
 		const collection = db.collection('problems');
 		
-		await collection.deleteOne({ _id: new ObjectId(params.id) });
+		await collection.deleteOne({ _id: new ObjectId(id) });
 		
 		return NextResponse.json({ success: true });
 	} catch (error) {

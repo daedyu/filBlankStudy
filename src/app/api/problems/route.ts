@@ -1,6 +1,6 @@
 import {NextRequest, NextResponse} from "next/server";
 import clientPromise from "@/lib/mongodb";
-import {Problem} from "@/types";
+import {Problem, ProblemInput} from "@/types";
 
 export async function GET() {
 	try {

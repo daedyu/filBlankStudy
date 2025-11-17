@@ -314,11 +314,11 @@ export default function Home() {
 				<div className="bg-white rounded-2xl shadow-xl p-4 md:p-6 mb-4">
 					<div className="flex justify-between items-center mb-4">
 						<h1 className="text-2xl md:text-3xl font-bold text-gray-800">
-							빈칸 채우기 학습
+							네트워크 2차 수행 빈칸 채우기 학습
 						</h1>
 						<button
 							onClick={() => {
-								addProblem();
+								// addProblem();
 							}}
 							className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition-colors"
 						>
@@ -332,13 +332,13 @@ export default function Home() {
             </span>
 						<div className="flex gap-2">
 							<button
-								onClick={() => editProblem(currentProblem)}
+								// onClick={() => editProblem(currentProblem)}
 								className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
 							>
 								<Edit2 size={18} />
 							</button>
 							<button
-								onClick={() => deleteProblem(currentProblem._id)}
+								// onClick={() => deleteProblem(currentProblem._id)}
 								className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
 							>
 								<Trash2 size={18} />

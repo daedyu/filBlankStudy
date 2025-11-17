@@ -316,14 +316,14 @@ export default function Home() {
 						<h1 className="text-2xl md:text-3xl font-bold text-gray-800">
 							네트워크 2차 수행 빈칸 채우기 학습
 						</h1>
-						<button
-							onClick={() => {
-								// addProblem();
-							}}
-							className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition-colors"
-						>
-							<Plus size={20} />
-						</button>
+						{/*<button*/}
+						{/*	onClick={() => {*/}
+						{/*		// addProblem();*/}
+						{/*	}}*/}
+						{/*	className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 transition-colors"*/}
+						{/*>*/}
+						{/*	<Plus size={20} />*/}
+						{/*</button>*/}
 					</div>
 					
 					<div className="flex items-center justify-between text-sm text-gray-600">
@@ -331,18 +331,18 @@ export default function Home() {
               문제 {currentIndex + 1} / {problems.length}
             </span>
 						<div className="flex gap-2">
-							<button
-								// onClick={() => editProblem(currentProblem)}
-								className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-							>
-								<Edit2 size={18} />
-							</button>
-							<button
-								// onClick={() => deleteProblem(currentProblem._id)}
-								className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-							>
-								<Trash2 size={18} />
-							</button>
+							{/*<button*/}
+							{/*	// onClick={() => editProblem(currentProblem)}*/}
+							{/*	className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"*/}
+							{/*>*/}
+							{/*	<Edit2 size={18} />*/}
+							{/*</button>*/}
+							{/*<button*/}
+							{/*	// onClick={() => deleteProblem(currentProblem._id)}*/}
+							{/*	className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"*/}
+							{/*>*/}
+							{/*	<Trash2 size={18} />*/}
+							{/*</button>*/}
 						</div>
 					</div>
 				</div>
